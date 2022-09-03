@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Administrator Settings: Team Maintenance - Add Team</h2>
+<form action="/teams" method="post">
+    <input class="input-maintenance" type="text" id="team_name" name="team_name" placeholder="Team name" required
+        autofocus>
+    <br>
+
+    <input class="btn" type="submit" value="Add Team">
+    <a class="btn" href="/teams">Cancel</a>
+</form>
+{% endblock %}

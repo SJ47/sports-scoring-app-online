@@ -1,0 +1,334 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ffd230;
+  --secondary-color: #000;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    
+    /* keep footer at bottom (along with footer css styling ) */
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Header styling  */
+.title {
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 700;
+    /* background: var(--primary-color); */
+    text-align: left;
+    margin: 0;
+    padding: .3em 1em;
+    color: #ffd230;
+   
+}
+
+header {
+    background-image: url(../static/images/black-white-soccer-ball-on-grass-field-web-header.jpeg);
+    background-position: bottom;
+}
+
+.subtitle {
+    background: var(--primary-color);;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-top: 1px solid grey;
+    padding: .5em 2em;
+}
+/* End Header Styling  */
+
+/* Nav Styling */
+.nav {
+    background: var(--secondary-color);
+    padding: 1em;
+    padding-left: 2.5em;
+    background-image: url(../static/images/black-white-soccer-ball-on-grass-field-web-header.jpeg);
+    background-position: bottom;
+    background: rgba(0,0,0,0.55)
+}
+
+.nav > ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 97%;
+}
+
+.nav > ul > li {
+    list-style: none;
+    padding-left: 2em;
+    padding: 0 .5em;
+    border-right: 3px solid var(--primary-color);
+}
+
+.nav > ul > li:first-child, .nav > ul > li:last-child{
+    border-left: 3px solid var(--primary-color);
+}
+
+.nav > ul > li:nth-child(3) {
+    margin-right: auto;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+/* End Nav Styling  */
+
+/* START of main section styling  */
+.main {
+    margin: 0 3em;
+    padding-bottom: 5.5rem;
+}
+
+.main-page-section > h4 > span {
+    border-bottom: 5px solid var(--primary-color);;
+    border-bottom-width: .5em;
+    border-bottom-right-radius: 10px;
+}
+
+
+.main-page-section > p {
+    margin-top: .5em;
+}
+/* END of main section styling  */
+
+
+/* START of table styling  */
+
+table {
+    border-collapse: collapse;
+    /* margin-left: auto;
+    margin-right: auto; */
+
+    margin-top: 2em;
+    padding: 1em;
+    width: 100%;
+}
+
+thead {
+    background: var(--primary-color);
+    border-bottom: 1px solid var(--secondary-color);
+    margin: 0;
+}
+
+th {
+    text-align: left;
+}
+
+/* Do not affect last updated text line aligned left */
+td:not(:last-of-type) {
+    text-align: center;
+}
+
+td:nth-of-type(2){
+    text-align: left;
+}
+
+.table-col-form {
+    letter-spacing: .5em;
+    text-align: justify;
+    font-family: "Courier";
+}
+
+.table-col-points, .table-col-teams {
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: var(--primary-color);
+}
+
+tfoot {
+    font-weight: lighter;
+    margin-left: 1em;
+    text-align: left;
+}
+
+tfoot > * :hover {
+    background-color: white;
+}
+
+.table-fixtures {
+    width: auto;
+}
+
+.table-league {
+    border-bottom: 1px dashed lightgrey;
+}
+
+.table-fixtures > tbody > tr > td {
+    text-align: left;
+}
+
+.table-fixtures > thead > tr> th {
+    padding-right: 2em;
+}
+
+.table-col-teams > a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.table-col-fixture-date {
+    padding-left: 1em;
+}
+/* END of table styling  */
+
+/* START of tooltip styling  */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted var(--secondary-color); 
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+/* END of tooltip styling  */
+
+
+/* START of button and icon styling  */
+.btn {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    margin: 1em;
+    padding: 1em 2em;
+    text-align: center;
+    font-size: 1em;
+    border: unset;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    width: auto;
+}
+
+.btn:hover, .btn:focus, .btn-links:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-links {
+    text-decoration: none;
+    color: white;
+    color: var(--secondary-color);
+}
+
+.trash-button, .edit-button {
+    color: var(--secondary-color);
+    margin-right: 1em;
+    background: transparent;
+    border: 0;
+    font-size: 1em;
+}
+
+.trash-button:hover {
+    color: var(--primary-color);
+    font-size: large;
+    background-color: var(--secondary-color);
+}
+
+.edit-button:hover {
+    color: green;
+}
+
+ .edit-icon {
+    color: var(--secondary-color);
+    margin-left: 1em;
+    background: transparent;
+    border: 0;
+    font-size: 1em;
+ }
+
+ .edit-icon:hover {
+    color: var(--primary-color);
+    font-size: 1.2em;
+    background-color: var(--secondary-color);
+}
+/* END of button and icon styling  */
+
+
+/* START of form and input styling  */
+.fixture-input-label {
+    padding-left: 1em;
+}
+
+.input-maintenance {
+    display: grid;
+    padding: .5em;
+    margin-left: 1.2em;
+    margin-bottom: .5em;
+    font-size: 1em;
+}
+/* END of form and input styling  */
+
+
+/* START of footer styling  */
+footer {
+    font-size: .75em;
+    text-align: center;
+    background: var(--secondary-color);
+    color: lightgray;
+    /* margin-top: 3em; */
+    padding: 1em;
+    
+    /* Keep footer at bottom  */
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 2.5rem;
+}
+/* END of footer styling  */
+
+/* START fixture maintenance add fixture styling  */
+.fixture-layout {
+    width: auto;
+}
+
+#fixture_result {
+    background-color: #ffd230;
+    width: 3em;
+    border: 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+#fixture_date {
+    display: inline-block;
+    width: 82%;
+}
+
+.fixture-hover:hover {
+    background-color: transparent;
+}
+
+/* END fixture maintenance add fixture styling  */
